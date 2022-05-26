@@ -1,0 +1,5 @@
+
+# .gitlab-ci.yml
+
+job:
+  script: echo Hello World!
