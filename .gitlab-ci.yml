@@ -8,7 +8,7 @@ build:
   stage: build
   script:
     - mkdir -p out
-    - echo '<h1>Hello World!</h1>' > out/index.html
+    - echo '<h1>Hello World2!</h1>' > out/index.html
   artifacts:
     paths:
       - out
