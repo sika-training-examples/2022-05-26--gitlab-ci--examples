@@ -1,5 +1,7 @@
 # .gitlab-ci.yml
 
+image: golang:1.18
+
 stages:
   - build
   - test
@@ -7,13 +9,12 @@ stages:
 build:
   stage: build
   script:
-    - mkdir -p out
-    - echo '<h1>Hello World2!</h1>' > out/index.html
+    - go build hello.go
   artifacts:
     paths:
-      - out
+      - hello
 
 test:
   stage: test
   script:
-    - cat out/index.html
+    - ./hello
