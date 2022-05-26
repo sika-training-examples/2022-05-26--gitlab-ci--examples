@@ -1,5 +1,4 @@
-before_script:
-  - apk add curl
+image: sikalabs/ci
 
 a:
   script: curl -I https://google.com
