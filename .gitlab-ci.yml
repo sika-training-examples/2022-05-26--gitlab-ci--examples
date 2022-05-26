@@ -1,5 +1,5 @@
 # .gitlab-ci.yml
 
 test:
-  script: echo test ... && false
+  script: echo test ... 
   allow_failure: true
