@@ -6,7 +6,7 @@ stages:
 
 build:
   stage: build
-  script: echo Build! && false
+  script: sh test.sh
 
 test1:
   stage: test
