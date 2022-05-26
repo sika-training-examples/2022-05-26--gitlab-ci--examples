@@ -2,12 +2,12 @@
 
 job:
   script: 
-    - echo Job2!
+    - echo Job2! && false
     - echo cleanup
 
 
 job2:
   script: 
-    - echo Job2!
+    - echo Job2! && false
   after_script:
     - echo cleanup
