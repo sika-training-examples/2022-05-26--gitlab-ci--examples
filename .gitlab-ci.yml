@@ -1,4 +1,10 @@
-env:
-  script:
-    - env | grep MY_
-    - cat $MY_FILE
+variables:
+  XXX_GLOBAL: global
+
+job1:
+  script: env | grep XXX
+
+job2:
+  variables:
+    XXX_LOCAL: local
+  script: env | grep XXX
