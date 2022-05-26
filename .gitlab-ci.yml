@@ -1,3 +1,4 @@
 env:
   script:
     - env | grep MY_
+    - cat $MY_FILE
