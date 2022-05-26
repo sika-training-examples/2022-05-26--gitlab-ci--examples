@@ -1,9 +1,7 @@
 image: node:14
+variables:
+  GIT_CLEAN_FLAGS: -ffdx -e .yarn-cache
 
 job:
-  cache:
-    key: ${CI_COMMIT_REF_SLUG}
-    paths:
-      - node_modules
   script:
-    - yarn install
+    - yarn install --frozen-lockfile --cache-folder .yarn-cache --prefer-offline
