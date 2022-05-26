@@ -3,10 +3,10 @@ before_script:
   - apt install -y curl
 
 a:
-  curl -I https://google.com
+  script: curl -I https://google.com
 
 b:
-  curl -I https://facebook.com
+  script: curl -I https://facebook.com
 
 c:
-  curl -I https://apple.com
+  script: curl -I https://apple.com
