@@ -1,6 +1,7 @@
 # .gitlab-ci.yml
 
-test:
-  script: echo test ... && false
-  retry: 2
+image: sikalabs/ci
 
+test:
+  script: '[ "$(slu random int --max 2)" == "0" ]'
+  retry: 2
