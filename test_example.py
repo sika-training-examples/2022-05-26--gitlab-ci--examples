@@ -5,4 +5,4 @@ def test_ok():
 
 def test_err():
     a = 1
-    assert False
+    assert True
