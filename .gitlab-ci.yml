@@ -1,6 +1,5 @@
 before_script:
-  - apt update
-  - apt install -y curl
+  - apk add curl
 
 a:
   script: curl -I https://google.com
