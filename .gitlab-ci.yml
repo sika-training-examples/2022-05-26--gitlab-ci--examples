@@ -1,9 +1,12 @@
-# .gitlab-ci.yml
-test:
-  image: ondrejsika/pytest
-  script:
-    - pytest --junitxml=report.xml
-    - cat report.xml
-  artifacts:
-    reports:
-      junit: report.xml
+before_script:
+  - apt update
+  - apt install -y curl
+
+a:
+  curl -I https://google.com
+
+b:
+  curl -I https://facebook.com
+
+c:
+  curl -I https://apple.com
