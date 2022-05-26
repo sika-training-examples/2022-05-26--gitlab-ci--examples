@@ -1,7 +1,5 @@
-# .gitlab-ci.yml
-
-image: registry.sikademo.com/ondrejsika/base-image
-
-job:
-  script:
-    - curl -I sika.io
+deploy:
+  script: echo 'Deploy!'
+  environment:
+    name: $CI_COMMIT_REF_SLUG
+    url: https://$CI_COMMIT_REF_SLUG.dev.company.com
