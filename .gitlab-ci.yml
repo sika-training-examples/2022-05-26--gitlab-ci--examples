@@ -8,3 +8,7 @@ b:
 
 c:
   script: curl -I https://apple.com
+
+build:
+  image: node:14
+  script: yarn
