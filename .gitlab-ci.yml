@@ -7,11 +7,11 @@ variables:
     - echo docker build -t $IMAGE .
 
 build dev:
-  include: .build
+  extends: .build
   variables:
     IMAGE: $DEV_IMAGE
 
 build prod:
-  include: .build
+  extends: .build
   variables:
     IMAGE: $PROD_IMAGE
