@@ -4,4 +4,5 @@ test:
   when: manual
   script: echo test ... && false
   allow_failure: false
+  retry: 2
 
