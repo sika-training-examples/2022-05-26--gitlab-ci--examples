@@ -1,17 +1,8 @@
-variables:
-  PROD_IMAGE: $CI_REGISTRY_IMAGE/prod:$CI_COMMIT_REF_SLUG-$CI_PIPELINE_ID
-  DEV_IMAGE: $CI_REGISTRY_IMAGE/dev:$CI_COMMIT_REF_SLUG-$CI_PIPELINE_ID
-
-.build:
+job:
+  cache:
+    key: ${CI_COMMIT_REF_SLUG}
+    paths:
+      - now
   script:
-    - echo docker build -t $IMAGE .
-
-build dev:
-  extends: .build
-  variables:
-    IMAGE: $DEV_IMAGE
-
-build prod:
-  extends: .build
-  variables:
-    IMAGE: $PROD_IMAGE
+    - date >> now
+    - cat now
